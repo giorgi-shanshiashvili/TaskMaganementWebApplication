@@ -15,7 +15,9 @@ namespace TaskMaganementWebApplication.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        
+        
+    private readonly ILogger<HomeController> _logger;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
 
@@ -38,7 +40,7 @@ namespace TaskMaganementWebApplication.Controllers
             
             HttpContext.Session.Clear();
             
-            return RedirectToAction("Login"); ;
+            return RedirectToAction("Login"); 
         }
         [HttpPost]
         public async Task<IActionResult> LoginAsync(ApplicationUser model)
